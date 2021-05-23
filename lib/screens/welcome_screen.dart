@@ -1,3 +1,4 @@
+import 'package:auth_screens_challenge/constants/style_utils.dart';
 import 'package:auth_screens_challenge/screens/login_screen.dart';
 import 'package:auth_screens_challenge/screens/signup_screen.dart';
 import 'package:auth_screens_challenge/widgets/rounded_button.dart';
@@ -8,14 +9,17 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      // backgroundColor: Colors.orange,
+      backgroundColor: Colors.orange,
       body: Container(
         width: double.infinity,
         height: size.height,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Welcome to Authy"),
+            Text(
+              "Welcome to Authy",
+              style: kformTitleTextStyle,
+            ),
             RoundedButton(
               press: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
