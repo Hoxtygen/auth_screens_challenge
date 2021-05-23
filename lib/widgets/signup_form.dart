@@ -77,7 +77,7 @@ class _SignupFormState extends State<SignupForm> {
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                     content: Text(
                         "Creating your account, this will take some few seconds"),
-                    duration: const Duration(seconds: 1),
+                    duration: const Duration(seconds: 4),
                     backgroundColor: Colors.blue,
                   ));
                 }

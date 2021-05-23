@@ -46,6 +46,10 @@ class _LoginFormState extends State<LoginForm> {
             Container(
               width: size.width * 0.8,
               child: TextFormField(
+                obscureText: true,
+                autocorrect: false,
+                obscuringCharacter: "*",
+                enableSuggestions: false,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.vpn_key_sharp),
                   fillColor: Colors.white,
@@ -73,7 +77,7 @@ class _LoginFormState extends State<LoginForm> {
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       content: Text(
                           "Logging you into your account, this will take some few seconds"),
-                      duration: const Duration(seconds: 1),
+                      duration: const Duration(seconds: 4),
                       backgroundColor: Colors.blue,
                     ));
                   }
