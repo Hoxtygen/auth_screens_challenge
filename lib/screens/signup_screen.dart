@@ -1,18 +1,18 @@
 import 'package:auth_screens_challenge/constants/style_utils.dart';
-import 'package:auth_screens_challenge/widgets/login_form.dart';
+import 'package:auth_screens_challenge/widgets/animated_image.dart';
+import 'package:auth_screens_challenge/widgets/signup_form.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
+class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final topPadding = MediaQuery.of(context).padding.top;
     return Container(
       decoration: BoxDecoration(
-        gradient: kLoginPurpleGradient,
+        gradient: kSignupPurpleGradient,
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(
           child: SizedBox(
             width: double.infinity,
@@ -20,16 +20,19 @@ class LoginScreen extends StatelessWidget {
               children: [
                 SizedBox(height: topPadding),
                 SizedBox(height: 10),
-                Image.asset("assets/images/person_&_dog.png"),
-                Text("Welcome Back!", style: kformSubtitleTextStyle),
+                AnimatedImage(),
                 Text(
-                  "Please, Log In.",
+                  "Hi there!",
+                  style: kformSubtitleTextStyle,
+                ),
+                Text(
+                  "Let's get started.",
                   style: kformTitleTextStyle,
                 ),
                 SizedBox(
                   height: 30.0,
                 ),
-                LoginForm(),
+                SignupForm()
               ],
             ),
           ),
@@ -38,5 +41,3 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-
-//image: AssetImage("assets/images/log_in.png"),

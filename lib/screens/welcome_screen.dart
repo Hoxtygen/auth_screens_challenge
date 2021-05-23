@@ -1,3 +1,5 @@
+import 'package:auth_screens_challenge/screens/login_screen.dart';
+import 'package:auth_screens_challenge/screens/signup_screen.dart';
 import 'package:auth_screens_challenge/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +18,9 @@ class WelcomeScreen extends StatelessWidget {
             Text("Welcome to Authy"),
             RoundedButton(
               press: () {
-                print("you clicked login");
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return LoginScreen();
+                }));
               },
               text: "Login",
             ),
@@ -24,7 +28,9 @@ class WelcomeScreen extends StatelessWidget {
                 colour: Colors.pinkAccent,
                 text: "Register",
                 press: () {
-                  print("register button pressed");
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return SignUpScreen();
+                  }));
                 }),
           ],
         ),
