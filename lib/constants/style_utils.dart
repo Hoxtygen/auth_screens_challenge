@@ -7,10 +7,13 @@ final kSignupPurpleGradient = LinearGradient(colors: [
 ]);
 final kSignupDarkPurple = Color.fromRGBO(82, 67, 154, 1);
 
-final kLoginPurpleGradient = LinearGradient(colors: [
-  Color.fromRGBO(229, 178, 202, 1),
-  Color.fromRGBO(205, 130, 222, 1),
-]);
+final kLoginPurpleGradient = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+      Color.fromRGBO(229, 178, 202, 1),
+      Color.fromRGBO(205, 130, 222, 1),
+    ]);
 final kLoginDarkPurple = Color.fromRGBO(120, 37, 139, 1);
 
 final kformTitleTextStyle = TextStyle(
